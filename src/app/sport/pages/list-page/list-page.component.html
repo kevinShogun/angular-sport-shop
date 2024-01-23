@@ -1,0 +1,8 @@
+<h1>Listo de articulos deportivos</h1>
+<mat-divider></mat-divider>
+
+<div class="grid grid-cols-12 mb-8 gap-4 mt-5">
+  <div *ngFor="let sport of sports" class="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3">
+    <sports-sport-card [sport]="sport"></sports-sport-card>
+  </div>
+</div>

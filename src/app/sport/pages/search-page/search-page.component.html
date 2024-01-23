@@ -1,0 +1,77 @@
+<div class="flex flex-col p-3">
+  <h3>Buscador</h3>
+
+  <mat-form-field>
+    <mat-label>Buscador de artículos</mat-label>
+    <input type="text" matInput [formControl]="searchInput" (input)="searchSport()" [matAutocomplete]="auto" />
+
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="onSelectedOption($event)">
+      <mat-option *ngFor="let s of sports" [value]="s">
+        {{s.name}}
+      </mat-option>
+      <mat-option *ngIf="sports.length===0 && searchInput.value && searchInput.value.trim().length > 0">
+        No se encontró nda con el termino {{searchInput.value}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <div *ngIf="selectSport"
+    class="w-[90%] md:w-[85%] gap-4 rounded-lg shadow-slate-600 shadow-xl flex flex-col md:flex-row min-h-[650px] m-auto">
+    <img [src]="selectSport  | sportImage" [alt]="selectSport.name" class=" w-full rounded-t-xl md:w-1/2 object-cover md:rounded-l-xl
+    rounded-t-none
+    " />
+    <div class="flex-flex-col w-full md:w-1/2 p-3">
+      <b class="text-lg md:text-2xl lg:text-4xl mb-4 text-[#a9a9a9] drop-shadow-md
+        font-barlow
+        ">{{selectSport.name}}</b>
+      <br /><br />
+      <small>{{selectSport.description}}</small>
+      <br /><br />
+      <p class="font-pompiere text-xl lg:text-3xl">Tallas:</p>
+      <div class="flex flex-wrap gap-5 mt-3">
+        <div *ngFor="let size of selectSport.size" class="px-3 py-2 text-center ring-2 ring-zinc-300 hover:bg-zinc-300 hover:text-black
+          transition-all duration-200 ease-linear cursor-pointer">
+          {{size}}
+        </div>
+      </div>
+
+      <br /><br />
+      <p class="font-pompiere text-xl lg:text-3xl">Colores:</p>
+      <div class="flex flex-wrap gap-5 mt-3">
+        <div *ngFor="let color of selectSport.colors" class="px-3 pt-2 text-center ring-2 ring-zinc-300 hover:bg-zinc-300 hover:text-black
+         transition-all duration-200 ease-linear cursor-pointer flex items-center justify-center gap-3">
+          <p>
+            {{color}}
+          </p>
+          <div [ngClass]="'w-5 h-5 rounded-full shadow-xl -mt-3 ' + (
+                              color.toLowerCase() === 'white' ? 'bg-white' :
+                              color.toLowerCase() === 'black' ? 'bg-black' :
+                              'bg-' + color.toLowerCase() + '-400'
+                            )">
+          </div>
+        </div>
+      </div>
+      <br />
+      <mat-divider></mat-divider>
+      <br />
+      <p class="font-kiteOne text-2xl">Precio: {{selectSport.price | currency}}</p>
+      <br />
+
+      <div class="flex flex-wrap gap-8">
+        <button mat-flat-button
+          color="accent"
+        >
+          <mat-icon>add_shopping_cart</mat-icon>
+          Añadir al carrito
+        </button>
+        <button mat-flat-button
+          color="primary"
+
+        >
+          <mat-icon>attach_money</mat-icon>
+          Comprar
+        </button>
+      </div>
+
+    </div>
+  </div>

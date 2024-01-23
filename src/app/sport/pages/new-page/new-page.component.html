@@ -1,0 +1,104 @@
+<h1>
+  {{currentSport.id ? 'Editar' : 'Agregar'}}
+  - Artículo
+  <small *ngIf="currentSport.id">{{currentSport.name}}</small>
+</h1>
+
+<mat-divider></mat-divider>
+
+<div class="grid grid-cols-12 gap-3 mt-5">
+  <div class="col-span-12 md:col-span-6">
+    <mat-card>
+      <mat-card-content>
+
+        <form class="grid grid-cols-12 gap-3" [formGroup]="sportForm" (ngSubmit)="onSubmit()">
+          <div class="col-span-12 md:col-span-6">
+            <mat-form-field [style]="'width: 100%;'">
+              <mat-label>Nombre artículo</mat-label>
+              <input matInput type="text" required formControlName="name" />
+            </mat-form-field>
+          </div>
+
+          <div class="col-span-12 md:col-span-6">
+            <mat-form-field [style]="'width: 100%;'">
+              <mat-label>Precio: </mat-label>
+              <input matInput type="number" required formControlName="price" />
+            </mat-form-field>
+          </div>
+
+          <div class="col-span-12">
+            <mat-form-field [style]="'width: 100%;'">
+              <mat-label>Descripción: </mat-label>
+              <textarea matInput type="" required formControlName="description"></textarea>
+            </mat-form-field>
+          </div>
+
+          <div class="col-span-12">
+            <mat-form-field [style]="'width: 100%;'">
+              <mat-label>Categoría: </mat-label>
+              <mat-select required formControlName="category">
+                <mat-option *ngFor="let category of categories" [value]="category.id">
+                  {{category.value}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="col-span-12">
+            <mat-form-field [style]="'width: 100%;'">
+              <mat-label>Tallas: </mat-label>
+              <mat-select required formControlName="size" multiple>
+                <mat-option *ngFor="let size of sizes" [value]="size.id">
+                  {{size.value}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="col-span-12">
+            <mat-form-field [style]="'width: 100%;'">
+              <mat-label>Colores: </mat-label>
+              <mat-select required multiple formControlName="colors">
+                <mat-option *ngFor="let color of colors" [value]="color.id">
+                  {{color.value}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="col-span-12 ">
+            <mat-form-field [style]="'width: 100%;'">
+              <mat-label>Imagen alternativa: </mat-label>
+              <input matInput type="text" required formControlName="alt_img" />
+            </mat-form-field>
+          </div>
+        </form>
+
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="flex w-full justify-between">
+          <button mat-flat-button color="warn" *ngIf="currentSport.id"
+            (click)="onDelete()"
+          >
+            Borrar
+          </button>
+          <div></div>
+
+          <button mat-flat-button color="primary" (click)="onSubmit()">
+            <mat-icon>save</mat-icon>
+            Guardar
+          </button>
+        </div>
+
+      </mat-card-actions>
+    </mat-card>
+
+
+  </div>
+  <div class="col-span-12 md:col-span-6">
+
+    <mat-card>
+      <img [src]="currentSport | sportImage" alt="Producto" matCardImage class="max-h-screen object-cover" />
+    </mat-card>
+  </div>
+</div>

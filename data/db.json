@@ -1,0 +1,262 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "usuario": "John Doe",
+      "email": "john.due@gmail.com"
+    }
+  ],
+  "sportsProducts": [
+    {
+      "id": 1,
+      "name": "Sport Shoes",
+      "price": 59.99,
+      "description": "Performance-oriented athletic shoes.",
+      "size": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43"
+      ],
+      "colors": [
+        "White",
+        "Green"
+      ],
+      "category": "Shoes"
+    },
+    {
+      "id": 2,
+      "name": "Sport T-Shirt",
+      "price": 24.99,
+      "description": "Comfortable and breathable shirt for your workouts.",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Blue",
+        "Black"
+      ],
+      "category": "T-shirts",
+      "alt_img": null
+    },
+    {
+      "id": 3,
+      "name": "Sport Socks",
+      "price": 9.99,
+      "description": "Padded socks for extra comfort during exercise.",
+      "size": [
+        "One Size"
+      ],
+      "colors": [
+        "Black"
+      ],
+      "category": "Socks"
+    },
+    {
+      "id": 4,
+      "name": "Protective Knee Pads",
+      "price": 15.99,
+      "description": "Durable knee pads to protect your knees during contact sports.",
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "colors": [
+        "Red"
+      ],
+      "category": "Accessories"
+    },
+    {
+      "id": 18,
+      "name": "Nike Air Max 270",
+      "price": 150,
+      "description": "The Nike Air Max 270 is a perfect everyday and exercise shoe. It features Air Max cushioning that provides a comfortable and soft stride.",
+      "size": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "colors": [
+        "Black",
+        "White",
+        "Blue",
+        "Red",
+        "Green"
+      ],
+      "category": "Shoes"
+    },
+    {
+      "id": 7,
+      "name": "Sport Pants",
+      "price": 34.99,
+      "description": "Comfortable and stretchy pants for your workout sessions.",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Zinc",
+        "Black"
+      ],
+      "category": "Pants"
+    },
+    {
+      "id": 6,
+      "name": "Sports Water Bottle",
+      "price": 12.99,
+      "description": "Ergonomic water bottle to keep you hydrated during exercise.",
+      "colors": [],
+      "category": "Accessories"
+    },
+    {
+      "id": 5,
+      "name": "Training Shoes",
+      "price": 79.99,
+      "description": "Shoes designed for intensive workouts and physical activities.",
+      "size": [
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "colors": [
+        "Black",
+        "Zinc"
+      ],
+      "category": "Shoes"
+    },
+    {
+      "id": 23,
+      "name": "Sport Socks",
+      "price": 9.99,
+      "description": "Cushioned socks for enhanced comfort during exercise.",
+      "size": [
+        "One Size"
+      ],
+      "colors": [
+        "White"
+      ],
+      "category": "Socks"
+    },
+    {
+      "id": 29,
+      "name": "Sport T-shirt",
+      "price": 24.99,
+      "description": "Comfortable and breathable t-shirt for your workouts.",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Blue",
+        "Green",
+        "Orange"
+      ],
+      "category": "T-shirts"
+    },
+    {
+      "id": 27,
+      "name": "Adidas Originals Trefoil T-Shirt",
+      "price": 25,
+      "description": "The Adidas Originals Trefoil T-Shirt is a classic and stylish tee that's perfect for everyday wear. It's made from soft, comfortable cotton and features the iconic Trefoil logo.",
+      "category": "T-shirts",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "Black",
+        "White",
+        "Blue",
+        "Red",
+        "Green"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Nike Elite Crew Socks",
+      "description": "The Nike Elite Crew Socks are a high-performance sock that's perfect for athletes. They're made from moisture-wicking materials that keep your feet dry and comfortable, and they feature a compression fit that helps to improve your performance.",
+      "price": 15,
+      "category": "Socks",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Black",
+        "White",
+        "Blue",
+        "Red",
+        "Green"
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Shock Doctor Sports Knee Pads",
+      "description": "The Shock Doctor Sports Knee Pads are a comfortable and protective pair of knee pads that are perfect for athletes of all levels. They feature a dual-density foam construction that provides excellent impact protection, and they're designed to be breathable and comfortable to wear.",
+      "price": 35,
+      "category": "Accessories",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        "Black",
+        "White",
+        "Blue",
+        "Red",
+        "Green"
+      ]
+    },
+    {
+      "id": 95,
+      "name": "Puma Suede Classic Shoes",
+      "description": "The Puma Suede Classic Shoes are a classic and stylish pair of shoes that's perfect for everyday wear. They're made from durable suede and feature a comfortable rubber sole.",
+      "price": 50,
+      "category": "Shoes",
+      "size": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "colors": [
+        "Black",
+        "White",
+        "Blue",
+        "Red",
+        "Green"
+      ]
+    }
+  ]
+}

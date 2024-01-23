@@ -1,0 +1,47 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{sport.name}}</mat-card-title>
+    <mat-card-subtitle>Price: {{sport.price | currency}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <img mat-card-image [src]="sport | sportImage" [alt]="sport.name" [title]="sport.name" />
+
+  <mat-card-content class="mt-2">
+    <h4>{{sport.category}}</h4>
+    <small>
+      {{sport.description}}
+    </small>
+    <br />
+    <div class="mt-2 flex flex-wrap items-center gap-3">
+      Sizes:
+      <mat-chip-listbox>
+        <mat-chip *ngFor="let size of sport.size | slice:0:4" [ngStyle]="{fontSize: '10px'}">
+          {{size}}
+        </mat-chip>
+      </mat-chip-listbox>
+
+    </div>
+    <mat-divider class="mt-2"></mat-divider>
+    <div class="mt-2 flex flex-wrap items-center gap-3">
+      <p>Colors: </p>
+      <div *ngFor="let color of sport.colors" [ngClass]="'w-5 h-5 rounded-full shadow-xl -mt-3 ' + (
+                              color.toLowerCase() === 'white' ? 'bg-white' :
+                              color.toLowerCase() === 'black' ? 'bg-black' :
+                              'bg-' + color.toLowerCase() + '-400'
+                            )">
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button mat-rasied color="secondary" [routerLink]="['/sport/edit', sport.id]">
+      <mat-icon>edit</mat-icon>
+      Editar
+    </button>
+    <div class="spacer"></div>
+    <button mat-button mat-rasied color="secondary" [routerLink]="['/sport', sport.id]">
+      <mat-icon>more</mat-icon>
+      Ver
+    </button>
+  </mat-card-actions>
+
+</mat-card>
