@@ -2,6 +2,12 @@
 
 Explore a dynamic Angular application showcasing a catalog of sports products crafted using artificial intelligence. This application incorporates Angular Material and Tailwind CSS for a visually appealing and responsive design. With a fake backend powered by JSON Server, it facilitates CRUD operations seamlessly. The implementation includes the use of Reactive Forms, route guards for route protection, and efficient management of environment variables.
 
+
+
+https://github.com/kevinShogun/angular-sport-shop/assets/54457637/7b735208-f536-4263-8c5d-a5f363d667a9
+
+
+
 ### Key Technologies
 
 - **Angular Material:** Enhancing UI components and design aesthetics.
