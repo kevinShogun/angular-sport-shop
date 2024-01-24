@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "usuario": "John Doe",
+      "user": "John Doe",
       "email": "john.due@gmail.com"
     }
   ],
@@ -224,31 +224,6 @@
         "M",
         "L",
         "XL"
-      ],
-      "colors": [
-        "Black",
-        "White",
-        "Blue",
-        "Red",
-        "Green"
-      ]
-    },
-    {
-      "id": 95,
-      "name": "Puma Suede Classic Shoes",
-      "description": "The Puma Suede Classic Shoes are a classic and stylish pair of shoes that's perfect for everyday wear. They're made from durable suede and feature a comfortable rubber sole.",
-      "price": 50,
-      "category": "Shoes",
-      "size": [
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15"
       ],
       "colors": [
         "Black",
